@@ -46,5 +46,10 @@ kubectl get pods -o wide
 
 # outputs yaml code for run command
  kubectl run redis --image=redis123 --dry-run=client -o yaml
+
+ # apply new changes from file
+ kubectl apply -f <file>.yaml
+ # or there is second method, which will open vim to make any edits
+ kubectl edit pods redis
 ```
 
