@@ -32,9 +32,16 @@ kubectl delete deployment hello-node
 **Demo Pods**
 
 ```bash
+#create pod
 kubectl run nginx --image=nginx
+
+# list pods
 kubectl get pods
+
+# get pod details
 kubectl describe pods nginx
+
+# list pods with node details
 kubectl get pods -o wide
 ```
 

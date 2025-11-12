@@ -1,7 +1,5 @@
 {
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#411D55",
-        "titleBar.activeBackground": "#5B2978",
-        "titleBar.activeForeground": "#FCF9FD"
+    "yaml.schemas": {
+        "kubernetes": "*.yaml"
     }
 }
