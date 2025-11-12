@@ -1,0 +1,1 @@
+### Kubernetes for the beginners hands on ([oreilly-link](https://learning.oreilly.com/course/kubernetes-for-the/9781838555962/))
