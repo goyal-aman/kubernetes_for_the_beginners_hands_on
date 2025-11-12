@@ -43,5 +43,8 @@ kubectl describe pods nginx
 
 # list pods with node details
 kubectl get pods -o wide
+
+# outputs yaml code for run command
+ kubectl run redis --image=redis123 --dry-run=client -o yaml
 ```
 
