@@ -55,3 +55,7 @@ kubectl delete replicaset <name_of_replicaset>
 # To delete replicacontroller
 kubectl delete replicacontroller <name_of_replicacontroller>
 ```
+14. Command to get all kubernetes objects
+```
+kubectl get all
+```

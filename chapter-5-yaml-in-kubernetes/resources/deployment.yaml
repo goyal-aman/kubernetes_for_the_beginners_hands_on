@@ -1,0 +1,27 @@
+# Note that only thing different from replicaset.yaml is 'kind'
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp-deployment
+  labels:
+    tier: frontend
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  replicas: 3
+
+  template:
+    # everything under template resembers pod.yaml
+    metadata:
+      name: nginx
+      labels:
+        app: myapp 
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+
+  
+  
