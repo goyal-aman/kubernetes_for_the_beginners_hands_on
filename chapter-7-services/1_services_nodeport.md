@@ -1,4 +1,7 @@
 ***Services: NodePort***
+
+> Deployment runs app. Services exposes app.
+
 1. Service in kubernetes are ways to expose pods running on node to external users. This is needed because of how networking works in kubernetes.
 
 2. In Kubernetes - each node has an ip address (lets say 192.168.1.1). Inside the node a separate internal network is created for internal communication.
