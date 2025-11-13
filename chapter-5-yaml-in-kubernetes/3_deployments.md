@@ -1,4 +1,4 @@
-**ReplicaControler and ReplicaSet**
+**Deployments**
 
 1. Deployments are higher in heirarchy than ReplicaSets and ReplicaControllers. There are pods. ReplicaSet manage pods. Deployment manage ReplicaSet. (Do note that ReplicationControllers are being phased out in favor of ReplicaSet). Deployments enable rolling deployments, rollbacks, pause-release etc
 
