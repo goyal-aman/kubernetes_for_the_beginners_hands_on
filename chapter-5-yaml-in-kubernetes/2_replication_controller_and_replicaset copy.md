@@ -42,7 +42,12 @@ kubectl describe replicaset myapp-rc
 kubectl describe replicationcontroller myapp-rc
 
 ```
-12. To delete replicaset and replicacontrollers
+12. To edit replicaset. This command will provide users a file view of replicaset to edit. Changes will be made immediately - as soon as file is closed.
+```
+kubectl edit replicaset myapp-rc
+```
+
+13. To delete replicaset and replicacontrollers
 ```
 # To delete replicaset
 kubectl delete replicaset <name_of_replicaset>
