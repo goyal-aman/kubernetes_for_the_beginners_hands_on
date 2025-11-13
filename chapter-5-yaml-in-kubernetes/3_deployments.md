@@ -6,7 +6,7 @@
 3. we have created a file `./resources/deployment.yaml`
 4. To create replication controller using above file
 ```shell
-kubectl create -f ./resources/deployment.yaml
+kubectl create -f ./resources/deployment.yaml 
 ```
 
 Running above command created a deployment object, replicaset and corresponding pods
@@ -38,4 +38,40 @@ kubectl get all
 7. To get details of deployment
 ```
 kubectl describe deployments myapp-deployment
+```
+8. Deployment can also be created from cli it self without creating/using a yaml file
+```shell
+# Create a deployment named my-dep that runs the busybox image
+kubectl create deployment my-dep --image=busybox
+
+# Create a deployment with a command
+kubectl create deployment my-dep --image=busybox -- date
+
+# Create a deployment named my-dep that runs the nginx image with 3 replicas
+kubectl create deployment my-dep --image=nginx --replicas=3
+
+# Create a deployment named my-dep that runs the busybox image and expose port 5701
+kubectl create deployment my-dep --image=busybox --port=5701
+```
+9. To see the status of deployment we just created
+```
+kubectl rollout status deployment myapp-deployment
+```
+10. To see the history of deployment
+```
+kubectl rollout history deployment myapp-deployment
+```
+11. Now, lets downgrade the version of nginx using edit command. When edit is saved, new changes will start to take place immediately
+```
+# Method 1: changed nginx to nginx:1.18
+kubectl edit deployment myapp-deployment
+
+# Method 2: use set image command
+kubectl set image deployment myapp-deployment nginx=nginx:1.18-perl
+```
+12. See the events in describe command to see scale-down and scale-up events
+13. We can roll back to previous deployment (each version of deployment if called revision)
+```shell
+# rollback to previous revision
+kubectl rollout undo deployment myapp-deployment
 ```
