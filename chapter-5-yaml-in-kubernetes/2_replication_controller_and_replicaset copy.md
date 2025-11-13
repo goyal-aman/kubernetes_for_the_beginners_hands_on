@@ -22,3 +22,14 @@ kubectl get pods
 ```
 kubectl create -f ./resources/replica_set.yaml
 ```
+10. When we need to change the number of replica's in ReplicaSet there are two methods
+```
+#Method 1 - update the replica count if file and apply that change 
+kubectl replace -f ./resources/replica_set.yaml
+
+
+#Method 2 - change the number of replica via cli command. This wont update the file.
+kubectl scale --replicas=5 ./resources/replica_set.yaml
+or 
+kubectl scale --replicas=5 replicaset myapp-rc
+```
