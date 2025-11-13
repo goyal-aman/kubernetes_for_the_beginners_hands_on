@@ -2,4 +2,4 @@
     "yaml.schemas": {
         "kubernetes": "*.yaml"
     }
-}
+} 
