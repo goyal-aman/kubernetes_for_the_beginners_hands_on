@@ -33,8 +33,16 @@ kubectl scale --replicas=5 ./resources/replica_set.yaml
 or 
 kubectl scale --replicas=5 replicaset myapp-rc
 ```
+11. To get details of replicaset or replicationcontroller
+```
+#Method 1: describe replicaset
+kubectl describe replicaset myapp-rc
 
-11. To delete replicaset and replicacontrollers
+#Method 2: describe replicationcontroller
+kubectl describe replicationcontroller myapp-rc
+
+```
+12. To delete replicaset and replicacontrollers
 ```
 # To delete replicaset
 kubectl delete replicaset <name_of_replicaset>
