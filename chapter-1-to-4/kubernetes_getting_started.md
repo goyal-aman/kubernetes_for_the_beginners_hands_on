@@ -14,6 +14,8 @@ kubectl create deployment hello-node --image=registry.k8s.io/e2e-test-images/agn
 kubectl get deployments
 kubectl get pods
 kubectl expose deployment hello-node --type=LoadBalancer --port=8080
+
+# to view the service on browser with ip and port
 minikube service hello-node 
 
 # list all service
